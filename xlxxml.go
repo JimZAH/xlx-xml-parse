@@ -33,7 +33,7 @@ type Stations struct {
 	LastHeardTime string   `xml:"LastHeardTime"`
 }
 
-func parse(file string) (Nodes, Station) {
+func Parse(file string) (Nodes, Station) {
 
 	var nodes Nodes
 	var stations Station
