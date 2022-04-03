@@ -5,12 +5,11 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	"time"
 )
 
 type Station struct {
 	Stationx  []Stations `xml:"STATION"`
-	Timestamp time.Time
+	Timestamp int64
 }
 
 type Nodes struct {
