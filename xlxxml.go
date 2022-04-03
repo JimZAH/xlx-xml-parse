@@ -5,10 +5,12 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"time"
 )
 
 type Station struct {
-	Stationx []Stations `xml:"STATION"`
+	Stationx  []Stations `xml:"STATION"`
+	Timestamp time.Time  `json:"TimeStamp"`
 }
 
 type Nodes struct {
