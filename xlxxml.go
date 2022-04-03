@@ -10,7 +10,7 @@ import (
 
 type Station struct {
 	Stationx  []Stations `xml:"STATION"`
-	Timestamp time.Time  `json:"TimeStamp"`
+	Timestamp time.Time
 }
 
 type Nodes struct {
