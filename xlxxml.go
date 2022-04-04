@@ -102,12 +102,12 @@ func Parse(file string) (Nodes, Station) {
 
 	err = xml.Unmarshal(byteValue, &nodes)
 	if err != nil {
-		panic(err)
+		fmt.Println("Error Unmarshal buffer (nodes): ", err)
 	}
 
 	err = xml.Unmarshal(buffer2, &stations)
 	if err != nil {
-		panic(err)
+		fmt.Println("Error Unmarshal buffer2 (Stations): ", err)
 	}
 
 	defer xmlFile.Close()
