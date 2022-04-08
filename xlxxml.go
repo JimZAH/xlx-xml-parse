@@ -46,8 +46,10 @@ func Parse(file string) (Nodes, Station) {
 	var buffer2 []byte
 
 	xmlFile, err := os.Open(file)
+
 	if err != nil {
 		fmt.Println(err)
+		return nodes, stations
 	}
 
 	// Main buffer
