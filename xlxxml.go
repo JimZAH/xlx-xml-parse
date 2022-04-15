@@ -52,6 +52,8 @@ func Parse(file string) (Nodes, Station) {
 		return nodes, stations
 	}
 
+	defer xmlFile.Close()
+
 	// Main buffer
 	byteValue, _ := ioutil.ReadAll(xmlFile)
 
@@ -111,8 +113,6 @@ func Parse(file string) (Nodes, Station) {
 	if err != nil {
 		fmt.Println("Error Unmarshal buffer2 (Stations): ", err)
 	}
-
-	defer xmlFile.Close()
 
 	return nodes, stations
 }
